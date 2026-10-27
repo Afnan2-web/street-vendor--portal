@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: street-vendor-portal
+    runtime: node
+    plan: 0.5c-512mb
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: street-vendor-portal-db
+          property: connectionString
+      - key: ADMIN_PASSWORD
+        sync: false
+
+databases:
+  - name: street-vendor-portal-db
+    databaseName: street_vendor_portal
+    user: street_vendor_portal
+    plan: 0.1c-256mb
+    region: singapore

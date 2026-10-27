@@ -1,0 +1,7 @@
+data/vendors.json
+data/applications.json
+data/users.json
+data/admin.json
+data/sessions.json
+node_modules/
+.env

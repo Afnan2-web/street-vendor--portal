@@ -1,0 +1,9 @@
+{
+  "name": "near-and-dear-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neighbourhood street vendor discovery portal",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "pg": "^8.16.3" },
+  "engines": { "node": ">=20" }
+}
