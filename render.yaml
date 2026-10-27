@@ -2,7 +2,7 @@ services:
   - type: web
     name: street-vendor-portal
     runtime: node
-    plan: 0.5c-512mb
+    plan: free
     region: singapore
     buildCommand: npm install
     startCommand: npm start
@@ -21,5 +21,5 @@ databases:
   - name: street-vendor-portal-db
     databaseName: street_vendor_portal
     user: street_vendor_portal
-    plan: 0.1c-256mb
+    plan: free
     region: singapore
